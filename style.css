@@ -1,0 +1,45 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    background: wheat;
+}
+
+.legendDoping {
+    display: grid;
+    grid-template: 25px / 20px 150px;
+    justify-items: start;
+    align-items: center;
+}
+
+.squareDoping {
+    height: 13px;
+    width: 13px;
+    background-color: red;
+    display: inline-block;
+}
+
+.legendNoDoping {
+    display: grid;
+    grid-template: 25px / 20px 150px;
+    justify-items: start;
+    align-items: center;
+
+}
+
+.squareNoDoping {
+    height: 13px;
+    width: 13px;
+    background-color: blue;
+    display: inline-block;
+}
+
+#tooltip {
+    visibility: hidden;
+    width: auto;
+    height: auto;
+}
