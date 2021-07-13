@@ -1,45 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+    --one: #171717;
+    --two: #444444;
+    --three: #DA0037;
+    --four: #EDEDED;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
 body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: var(--one);
 }
 
 svg {
-    background: wheat;
+    background: var(--two);
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#title {
+    font-size: 26px;
+    text-transform: uppercase;
+}
+
+#y-axis-label, #x-axis-label {
+    font-size: 1.5rem;
+}
+
+.dot:hover {
+    fill: hsl(0, 11%, 53%);
+}
+
+#legend {
+    padding-top: 16px;
+    display: flex;
+    font-size: 22px;
 }
 
 .legendDoping {
     display: grid;
-    grid-template: 25px / 20px 150px;
+    grid-template: 25px / 20px 220px;
     justify-items: start;
     align-items: center;
 }
 
 .squareDoping {
-    height: 13px;
-    width: 13px;
-    background-color: red;
+    height: 16px;
+    width: 16px;
+    background-color: var(--three);
     display: inline-block;
 }
 
 .legendNoDoping {
     display: grid;
-    grid-template: 25px / 20px 150px;
+    grid-template: 25px / 20px 220px;
     justify-items: start;
     align-items: center;
 
 }
 
 .squareNoDoping {
-    height: 13px;
-    width: 13px;
-    background-color: blue;
+    height: 16px;
+    width: 16px;
+    background-color: var(--four);
     display: inline-block;
 }
 
 #tooltip {
+    position: absolute;
+    margin-top: 6px;
     visibility: hidden;
-    width: auto;
+    width: 400px;
     height: auto;
+    font-size: 22px;
+    background: #5e4b4b;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
