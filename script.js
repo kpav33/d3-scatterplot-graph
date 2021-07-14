@@ -105,7 +105,7 @@ function generateAxes() {
     .attr("transform", "rotate(-90)")
     .attr("y", 0)
     .attr("x", 0 - height / 2)
-    .attr("dy", "1.3em")
+    .attr("dy", "0.9em")
     .style("text-anchor", "middle")
     .style("fill", "white")
     .text("Time in Minutes");
