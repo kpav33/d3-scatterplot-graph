@@ -13,10 +13,12 @@ let padding = 80;
 let svg = d3.select("svg");
 let tooltip = d3.select("#tooltip");
 
+// Draw canvas
 function drawCanvas() {
   svg.attr("width", width).attr("height", height);
 }
 
+// Generate necessary scales
 function generateScales() {
   xScale = d3
     .scaleLinear()
@@ -35,6 +37,7 @@ function generateScales() {
     .range([padding, height - padding]);
 }
 
+// Draw point and determine its color
 function drawPoint() {
   svg
     .selectAll("circle")
@@ -73,6 +76,7 @@ function drawPoint() {
     .on("mouseout", (d) => tooltip.transition().style("visibility", "hidden"));
 }
 
+// Generate axes and their titles
 function generateAxes() {
   let xAxis = d3.axisBottom(xScale).tickFormat(d3.format("d"));
 
@@ -111,6 +115,7 @@ function generateAxes() {
     .text("Time in Minutes");
 }
 
+// Fetch data
 fetch(url)
   .then((response) => response.json())
   .then((data) => {
